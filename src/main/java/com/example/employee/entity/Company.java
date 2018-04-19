@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
+@Table(name="Company")
 public class Company {
     @Id
     int id;
