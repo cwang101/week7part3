@@ -30,5 +30,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Query("update Employee employee set employee.name=?2 where employee.name=?1")
     int updataName(String origin,String target);
     //7.删除姓名是*的employee
+    @Modifying
+    @Query("delete from Employee where name = ?1")
     void deleteByName(String name);
 }
